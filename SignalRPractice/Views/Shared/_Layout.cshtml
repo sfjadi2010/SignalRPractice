@@ -42,9 +42,13 @@
             &copy; 2025 - SignalRPractice - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/lib/microsoft/signalr/dist/browser/signalr.js" async></script>
+    <script src="~/js/userCount.js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
