@@ -22,9 +22,17 @@ public class UserHub : Hub
         return base.OnDisconnectedAsync(exception);
     }
 
-    public async Task NewWindowLoaded()
+    //public async Task<string> NewWindowLoaded()
+    //{
+    //    TotalViews++;
+    //    await Clients.All.SendAsync("updateTotalViews", TotalViews);
+    //    return $"total views - {TotalViews}";
+    //}
+
+    public async Task<string> NewWindowLoaded(string user)
     {
         TotalViews++;
         await Clients.All.SendAsync("updateTotalViews", TotalViews);
+        return $"total views - {TotalViews} and user: {user}";
     }
 }
